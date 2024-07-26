@@ -1,8 +1,11 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'pizza2sab8ped_model.dart';
 export 'pizza2sab8ped_model.dart';
 
@@ -74,7 +77,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                           child: Stack(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.all(10.0),
+                                padding: EdgeInsets.all(10.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.network(
@@ -86,7 +89,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 15.0, 15.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -101,7 +104,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(6.0),
+                                        padding: EdgeInsets.all(6.0),
                                         child: Icon(
                                           Icons.chevron_left,
                                           color: FlutterFlowTheme.of(context)
@@ -120,7 +123,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             8.0, 6.0, 8.0, 6.0),
                                         child: Text(
                                           'Pizza Grande 2 Sabores',
@@ -141,7 +144,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(10.0),
+                          padding: EdgeInsets.all(10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -173,7 +176,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.all(10.0),
+                                padding: EdgeInsets.all(10.0),
                                 child: Material(
                                   color: Colors.transparent,
                                   elevation: 6.0,
@@ -196,7 +199,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 6.0, 0.0),
                                                 child: Card(
@@ -213,7 +216,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 0.0,
                                                                 6.0, 0.0),
                                                     child: Text(
@@ -249,7 +252,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                           ),
                                           collapsed: Container(),
                                           expanded: Padding(
-                                            padding: const EdgeInsets.all(10.0),
+                                            padding: EdgeInsets.all(10.0),
                                             child: ListView(
                                               padding: EdgeInsets.zero,
                                               shrinkWrap: true,
@@ -269,7 +272,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsets.all(10.0),
+                                                        EdgeInsets.all(10.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -346,7 +349,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.all(10.0),
+                                padding: EdgeInsets.all(10.0),
                                 child: Material(
                                   color: Colors.transparent,
                                   elevation: 6.0,
@@ -369,7 +372,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 6.0, 0.0),
                                                 child: Card(
@@ -386,7 +389,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 0.0,
                                                                 6.0, 0.0),
                                                     child: Text(
@@ -422,7 +425,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                           ),
                                           collapsed: Container(),
                                           expanded: Padding(
-                                            padding: const EdgeInsets.all(10.0),
+                                            padding: EdgeInsets.all(10.0),
                                             child: ListView(
                                               padding: EdgeInsets.zero,
                                               shrinkWrap: true,
@@ -442,7 +445,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsets.all(10.0),
+                                                        EdgeInsets.all(10.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -519,7 +522,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.all(10.0),
+                                padding: EdgeInsets.all(10.0),
                                 child: Material(
                                   color: Colors.transparent,
                                   elevation: 6.0,
@@ -542,7 +545,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 6.0, 0.0),
                                                 child: Card(
@@ -584,7 +587,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                           ),
                                           collapsed: Container(),
                                           expanded: Padding(
-                                            padding: const EdgeInsets.all(10.0),
+                                            padding: EdgeInsets.all(10.0),
                                             child: ListView(
                                               padding: EdgeInsets.zero,
                                               shrinkWrap: true,
@@ -604,7 +607,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsets.all(10.0),
+                                                        EdgeInsets.all(10.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -702,7 +705,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 0.0, 0.0),
                             child: FaIcon(
                               FontAwesomeIcons.minus,
@@ -711,7 +714,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: Text(
                               '1',
@@ -725,7 +728,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 8.0, 0.0),
                             child: FaIcon(
                               FontAwesomeIcons.plus,
@@ -748,7 +751,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Adicionar',
@@ -762,7 +765,7 @@ class _Pizza2sab8pedWidgetState extends State<Pizza2sab8pedWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 8.0, 0.0),
                             child: Text(
                               'R\$ 60,00',

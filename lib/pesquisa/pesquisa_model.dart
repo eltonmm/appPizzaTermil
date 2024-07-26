@@ -1,6 +1,10 @@
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'pesquisa_widget.dart' show PesquisaWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class PesquisaModel extends FlutterFlowModel<PesquisaWidget> {
   ///  State fields for stateful widgets in this page.

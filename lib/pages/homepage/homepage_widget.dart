@@ -2,9 +2,13 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'homepage_model.dart';
 export 'homepage_model.dart';
 
@@ -47,8 +51,8 @@ class _HomepageWidgetState extends State<HomepageWidget>
             curve: Curves.easeInOut,
             delay: 600.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -59,8 +63,8 @@ class _HomepageWidgetState extends State<HomepageWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(1.0, 1.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(1.0, 1.0),
+            end: Offset(1.0, 1.0),
           ),
           RotateEffect(
             curve: Curves.easeInOut,
@@ -113,7 +117,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
               ).animateOnPageLoad(animationsMap['iconOnPageLoadAnimation']!),
             ],
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
         ),
         body: SafeArea(
@@ -134,7 +138,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Stack(
                             children: [
@@ -142,7 +146,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                 width: double.infinity,
                                 height: 146.0,
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFF080808),
+                                  color: Color(0xFF080808),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Opacity(
@@ -159,9 +163,9 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-0.84, -0.82),
+                                alignment: AlignmentDirectional(-0.84, -0.82),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
@@ -175,9 +179,9 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.75, -0.97),
+                                alignment: AlignmentDirectional(0.75, -0.97),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 60.0, 0.0, 0.0),
                                   child: Text(
                                     'App Pizzaria Termil',
@@ -196,7 +200,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 20.0, 10.0, 0.0),
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
@@ -204,7 +208,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 10.0, 0.0),
                                   child: FFButtonWidget(
                                     onPressed: () {
@@ -213,10 +217,10 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                     text: 'Monte sua Pizza',
                                     options: FFButtonOptions(
                                       height: 40.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).tertiary,
@@ -228,7 +232,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -237,7 +241,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 10.0, 0.0),
                                   child: FFButtonWidget(
                                     onPressed: () {
@@ -246,10 +250,10 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                     text: 'Pizzas',
                                     options: FFButtonOptions(
                                       height: 40.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -262,7 +266,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -277,9 +281,9 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                   text: 'Bebidas',
                                   options: FFButtonOptions(
                                     height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
@@ -292,7 +296,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -304,7 +308,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 20.0, 10.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -324,10 +328,10 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsets.all(10.0),
+                                      padding: EdgeInsets.all(10.0),
                                       child: Container(
                                         width: double.infinity,
-                                        color: const Color(0x00000000),
+                                        color: Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController1,
@@ -358,7 +362,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                         .secondaryBackground,
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Text(
@@ -380,7 +384,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                               ),
                                             ),
                                             expanded: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       6.0, 20.0, 6.0, 10.0),
                                               child: Material(
@@ -402,7 +406,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 6.0,
                                                                 6.0, 6.0),
                                                     child: Row(
@@ -423,7 +427,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
+                                                              EdgeInsets.all(
                                                                   10.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -487,7 +491,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -503,14 +507,14 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -533,7 +537,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                                       ),
                                                               elevation: 3.0,
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,
@@ -574,7 +578,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 20.0, 10.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -594,10 +598,10 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsets.all(10.0),
+                                      padding: EdgeInsets.all(10.0),
                                       child: Container(
                                         width: double.infinity,
-                                        color: const Color(0x00000000),
+                                        color: Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController2,
@@ -628,7 +632,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                         .secondaryBackground,
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Text(
@@ -655,7 +659,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 20.0,
                                                                 6.0, 10.0),
                                                     child: Material(
@@ -680,7 +684,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       6.0,
                                                                       6.0,
@@ -707,7 +711,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsets
+                                                                    EdgeInsets
                                                                         .all(
                                                                             10.0),
                                                                 child: Column(
@@ -762,7 +766,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -781,14 +785,14 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -810,7 +814,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -830,7 +834,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 20.0,
                                                                 6.0, 10.0),
                                                     child: Material(
@@ -855,7 +859,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       6.0,
                                                                       6.0,
@@ -882,7 +886,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsets
+                                                                    EdgeInsets
                                                                         .all(
                                                                             10.0),
                                                                 child: Column(
@@ -937,7 +941,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -956,14 +960,14 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -985,7 +989,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:

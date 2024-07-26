@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'pagamento_model.dart';
 export 'pagamento_model.dart';
 
@@ -42,12 +44,12 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: EdgeInsets.all(10.0),
                     child: Text(
                       'Realizar Pagamento',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -65,7 +67,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                     'Preencha as informaçôes para concluir se pedido',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -81,7 +83,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
               color: FlutterFlowTheme.of(context).secondaryText,
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
               child: FlutterFlowCreditCardForm(
                 formKey: _model.creditCardFormKey,
                 creditCardModel: _model.creditCardInfo,
@@ -111,7 +113,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -128,7 +130,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -155,7 +157,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -186,7 +188,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
               color: FlutterFlowTheme.of(context).secondaryText,
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -213,7 +215,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -232,7 +234,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Icon(
                           Icons.info_outlined,
                           color: FlutterFlowTheme.of(context).secondaryText,
@@ -254,7 +256,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 15.0, 10.0, 10.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 15.0, 10.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -267,9 +269,9 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).tertiary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -278,7 +280,7 @@ class _PagamentoWidgetState extends State<PagamentoWidget> {
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

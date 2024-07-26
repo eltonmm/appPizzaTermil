@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'meus_pedidos_model.dart';
 export 'meus_pedidos_model.dart';
 
@@ -49,7 +51,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                 letterSpacing: 0.0,
               ),
         ),
-        actions: const [],
+        actions: [],
         centerTitle: false,
       ),
       body: SafeArea(
@@ -58,7 +60,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -75,7 +77,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -95,7 +97,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
               scrollDirection: Axis.vertical,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(6.0),
+                  padding: EdgeInsets.all(6.0),
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
@@ -103,7 +105,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -118,9 +120,9 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                                 text: 'Status',
                                 options: FFButtonOptions(
                                   height: 40.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
@@ -133,7 +135,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -141,7 +143,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   '20/11/2023 - 10h',
@@ -178,14 +180,14 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: EdgeInsets.all(16.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Nome do Produto',
@@ -205,7 +207,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 10.0, 0.0),
                                           child: Text(
                                             'R\$ 10,00',
@@ -220,7 +222,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 10.0, 0.0),
                                           child: Text(
                                             'X2',
@@ -238,14 +240,14 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: EdgeInsets.all(16.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Nome do Produto',
@@ -265,7 +267,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 10.0, 0.0),
                                           child: Text(
                                             'R\$ 10,00',
@@ -280,7 +282,7 @@ class _MeusPedidosWidgetState extends State<MeusPedidosWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 10.0, 0.0),
                                           child: Text(
                                             'X2',
